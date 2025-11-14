@@ -245,7 +245,7 @@ const Footer = () => {
         </div>
 
         {/* Newsletter Signup */}
-        <div className="border-t border-gray-700 pt-8 mb-8">
+        {/* <div className="border-t border-gray-700 pt-8 mb-8">
           <div className="bg-gradient-to-r from-amber-600 to-amber-700 rounded-2xl p-8 lg:p-10">
             <div className="grid md:grid-cols-2 gap-6 items-center">
               <div>
@@ -265,7 +265,7 @@ const Footer = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* Bottom Bar */}
         <div className="border-t border-gray-700 pt-8">
