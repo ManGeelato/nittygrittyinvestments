@@ -380,24 +380,6 @@ const ServiceBreakdown = () => {
             </div>
           ))}
         </div>
-
-        {/* Bottom CTA */}
-        <div className="text-center mt-10">
-          <div className="bg-gradient-to-r from-amber-50 to-yellow-50 rounded-xl p-6 border border-amber-100">
-            <h3 className="text-xl font-bold text-gray-800 mb-3">Ready to Get Started?</h3>
-            <p className="text-gray-600 text-sm mb-4 max-w-2xl mx-auto">
-              Contact us today for a free consultation and customized quote for your specific needs.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-3 justify-center">
-              <button className="bg-gradient-to-r from-amber-500 to-yellow-600 text-white px-6 py-3 rounded-lg font-semibold text-base hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5">
-                Schedule Consultation
-              </button>
-              <button className="border border-amber-500 text-amber-700 px-6 py-3 rounded-lg font-semibold text-base hover:bg-amber-50 transition-all duration-300">
-                Download Service Catalog
-              </button>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );

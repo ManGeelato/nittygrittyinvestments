@@ -21,7 +21,7 @@ const InteractiveMap = () => {
         saturday: '9:00 AM - 1:00 PM',
       },
       team: '15+ Team Members',
-      manager: 'Mike Grundy',
+      manager: 'Michael Fakude',
       color: 'amber',
       mapZoom: 12
     },
@@ -32,7 +32,7 @@ const InteractiveMap = () => {
       address: '1 Devon Road, Pinetown, Durban 3610',
       coordinates: { lat: -29.9031, lng: 30.8829 },
       contact: {
-        phones: ['073 288 8935'],
+        phones: ['067 199 2309'],
         emails: ['info@nittygritty.co.za', 'kzn@nittygritty.co.za'],
       },
       hours: {
@@ -51,7 +51,7 @@ const InteractiveMap = () => {
       address: '15 Suikerbos Street, Malmesbury 7300, Western Cape',
       coordinates: { lat: -33.4603, lng: 18.7279 },
       contact: {
-        phones: ['073 288 8935'],
+        phones: ['067 199 2309'],
         emails: ['info@nittygritty.co.za', 'capetown@nittygritty.co.za'],
       },
       hours: {

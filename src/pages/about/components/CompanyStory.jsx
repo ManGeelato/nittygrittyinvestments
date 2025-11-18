@@ -4,28 +4,28 @@ import { Calendar, Target, Eye, Users, TrendingUp, Shield } from 'lucide-react';
 const CompanyStory = () => {
   const timeline = [
     {
-      year: "2008",
+      year: "2013",
       title: "Humble Beginnings",
       description: "Nitty Gritty started as a small architectural firm in Johannesburg, focusing on residential projects and building a reputation for quality workmanship.",
       icon: <Calendar className="w-5 h-5" />,
       color: "from-amber-400 to-yellow-500"
     },
     {
-      year: "2012",
-      title: "Expansion into Services",
-      description: "Recognizing market needs, we expanded our offerings to include professional gardening and cleaning services, creating a comprehensive property management solution.",
-      icon: <TrendingUp className="w-5 h-5" />,
-      color: "from-amber-500 to-orange-500"
-    },
-    {
-      year: "2016",
+      year: "2019",
       title: "National Presence",
       description: "Opened regional offices in Durban and Cape Town, establishing ourselves as a nationwide provider of premium investment and property services.",
       icon: <Users className="w-5 h-5" />,
       color: "from-orange-500 to-amber-600"
     },
     {
-      year: "2023",
+      year: "2024",
+      title: "Expansion into Services",
+      description: "Recognizing market needs, we expanded our offerings to include professional gardening and cleaning services, creating a comprehensive property management solution.",
+      icon: <TrendingUp className="w-5 h-5" />,
+      color: "from-amber-500 to-orange-500"
+    },
+    {
+      year: "2025",
       title: "Industry Leadership",
       description: "Now recognized as a leading investment company, managing over 500 projects with a 98% client satisfaction rate across South Africa.",
       icon: <Shield className="w-5 h-5" />,
@@ -179,8 +179,8 @@ const CompanyStory = () => {
                   <span className="text-white font-bold text-base">MG</span>
                 </div>
                 <div>
-                  <h4 className="font-bold text-gray-800 text-sm">Mike Grundy</h4>
-                  <p className="text-amber-600 text-xs">Founder & CEO</p>
+                  <h4 className="font-bold text-gray-800 text-sm">Michael Fakude</h4>
+                  <p className="text-amber-600 text-xs">Director & CEO</p>
                 </div>
               </div>
               <blockquote className="text-sm text-gray-600 italic border-l-2 border-amber-400 pl-3">

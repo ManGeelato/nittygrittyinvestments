@@ -14,7 +14,7 @@ function About() {
       <VisionValues/>
       <TeamSection/>
       <TimelineComponent/>
-      <CommitmentSection/>
+      {/* <CommitmentSection/> */}
     </div>
   )
 }

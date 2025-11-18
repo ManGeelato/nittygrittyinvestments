@@ -173,42 +173,7 @@ const CommitmentSection = () => {
           ))}
         </div>
 
-        {/* Quality Assurance Process */}
-        <div className="mb-12">
-          <div className="text-center mb-8">
-            <h3 className="text-xl lg:text-2xl font-bold text-gray-800 mb-3">Our Quality Assurance Process</h3>
-            <p className="text-sm text-gray-600 max-w-2xl mx-auto">
-              Every project follows our rigorous 4-step quality process to ensure exceptional results
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-4 gap-4">
-            {qualityProcess.map((step, index) => (
-              <div 
-                key={index}
-                className="relative text-center group"
-              >
-                {/* Connecting Line */}
-                {index < qualityProcess.length - 1 && (
-                  <div className="hidden md:block absolute top-6 left-1/2 w-full h-0.5 bg-amber-200 transform -translate-y-1/2 z-0"></div>
-                )}
-                
-                <div className="relative bg-white rounded-lg shadow-md border border-amber-100 p-4 group-hover:shadow-lg transition-all duration-300 group-hover:-translate-y-0.5 z-10">
-                  <div className="w-12 h-12 bg-gradient-to-r from-amber-500 to-yellow-500 rounded-full flex items-center justify-center text-white font-bold text-sm mb-3 mx-auto">
-                    {step.step}
-                  </div>
-                  
-                  <div className="w-10 h-10 bg-amber-100 rounded-full flex items-center justify-center text-amber-600 mb-3 mx-auto">
-                    {step.icon}
-                  </div>
-                  
-                  <h4 className="text-base font-bold text-gray-800 mb-2">{step.title}</h4>
-                  <p className="text-xs text-gray-600 leading-relaxed">{step.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
+       
 
         {/* Service Promises */}
         <div className="bg-gradient-to-r from-amber-500 to-yellow-600 rounded-xl p-5 lg:p-6 text-white mb-12">

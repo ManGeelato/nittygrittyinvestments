@@ -26,7 +26,7 @@ const ServicesHero = () => {
   ];
 
   const serviceHighlights = [
-    "Comprehensive property solutions",
+    "Comprehensive solutions",
     "Nationwide service coverage",
     "Premium quality materials",
     "Expert certified professionals"
@@ -72,7 +72,7 @@ const ServicesHero = () => {
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-snug">
               Comprehensive
               <span className="block bg-gradient-to-r from-amber-400 to-yellow-500 bg-clip-text text-transparent">
-                Property Solutions
+                Solutions
               </span>
               Across South Africa
             </h1>

@@ -12,7 +12,7 @@ const MultiLocationCards = () => {
       contact: {
         phones: ['011 524 6421', '011 524 6435'],
         emails: ['info@nittygritty.co.za', 'mike@nittygritty.co.za'],
-        emergency: '073 288 8935'
+        emergency: '067 199 2309'
       },
       hours: {
         weekdays: '9:00 AM - 5:00 PM',
@@ -21,7 +21,7 @@ const MultiLocationCards = () => {
       },
       team: {
         size: '15+ Team Members',
-        manager: 'Mike Grundy',
+        manager: 'Michael Fakude',
         specialties: ['Architecture', 'Corporate Services']
       },
       amenities: [
@@ -42,9 +42,9 @@ const MultiLocationCards = () => {
       address: '1 Devon Road, Pinetown, Durban 3610',
       coordinates: { lat: -29.9031, lng: 30.8829 },
       contact: {
-        phones: ['073 288 8935'],
+        phones: ['067 199 2309'],
         emails: ['info@nittygritty.co.za', 'kzn@nittygritty.co.za'],
-        emergency: '073 288 8935'
+        emergency: '067 199 2309'
       },
       hours: {
         weekdays: '9:00 AM - 5:00 PM',
@@ -74,9 +74,9 @@ const MultiLocationCards = () => {
       address: '15 Suikerbos Street, Malmesbury 7300, Western Cape',
       coordinates: { lat: -33.4603, lng: 18.7279 },
       contact: {
-        phones: ['073 288 8935'],
+        phones: ['067 199 2309'],
         emails: ['info@nittygritty.co.za', 'capetown@nittygritty.co.za'],
-        emergency: '073 288 8935'
+        emergency: '067 199 2309'
       },
       hours: {
         weekdays: '9:00 AM - 5:00 PM',

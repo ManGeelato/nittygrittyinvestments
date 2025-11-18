@@ -32,8 +32,8 @@ const OperatingHoursDisplay = () => {
   };
 
   const emergencyServices = {
-    gardening: { available: true, phone: '073 288 8935', hours: '24/7' },
-    cleaning: { available: true, phone: '073 288 8935', hours: '24/7' },
+    gardening: { available: true, phone: '067 199 2309', hours: '24/7' },
+    cleaning: { available: true, phone: '067 199 2309', hours: '24/7' },
     architecture: { available: false, phone: '011 524 6421', hours: 'Next Business Day' }
   };
 

@@ -4,14 +4,14 @@ import { Linkedin, Mail, Phone, MapPin, Award, Calendar, Building } from 'lucide
 const TeamSection = () => {
   const teamMembers = [
     {
-      name: "Mike Grundy",
-      position: "Founder & CEO",
+      name: "Michael Fakude",
+      position: "Director & CEO",
       department: "Executive Leadership",
       image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=400&q=80",
       experience: "20+ years",
       location: "Johannesburg",
       email: "mike@nittygritty.co.za",
-      phone: "073 288 8935",
+      phone: "067 199 2309",
       bio: "Visionary leader with extensive experience in investment management and property development. Founded Nitty Gritty with a mission to transform the property services industry.",
       specialties: ["Strategic Planning", "Investment Analysis", "Business Development", "Leadership"],
       achievements: ["Industry Innovator Award 2020", "Top CEO Finalist 2022"],
@@ -20,7 +20,7 @@ const TeamSection = () => {
       }
     },
     {
-      name: "Sarah Johnson",
+      name: "Nombulelo Saboya",
       position: "Chief Operations Officer",
       department: "Operations",
       image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=400&q=80",
@@ -36,7 +36,7 @@ const TeamSection = () => {
       }
     },
     {
-      name: "David Chen",
+      name: "Michelle Adonsi",
       position: "Head of Architecture",
       department: "Architecture",
       image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=400&q=80",
@@ -52,7 +52,7 @@ const TeamSection = () => {
       }
     },
     {
-      name: "Grace Mbeki",
+      name: "Kgaugelo",
       position: "Head of Gardening",
       department: "Gardening & Landscaping",
       image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=400&q=80",
@@ -68,14 +68,14 @@ const TeamSection = () => {
       }
     },
     {
-      name: "James Peterson",
+      name: "Mpilo",
       position: "Head of Cleaning",
       department: "Cleaning & Maintenance",
       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=400&q=80",
       experience: "10+ years",
       location: "Durban",
       email: "james@nittygritty.co.za",
-      phone: "073 288 8935",
+      phone: "067 199 2309",
       bio: "Cleaning industry professional with expertise in commercial and residential cleaning standards. Implements innovative cleaning solutions and quality assurance protocols.",
       specialties: ["Commercial Cleaning", "Quality Assurance", "Team Training", "Eco-friendly Solutions"],
       achievements: ["Cleaning Standards Excellence", "Client Satisfaction Leader"],
@@ -129,26 +129,6 @@ const TeamSection = () => {
             Each team member brings unique expertise and dedication to delivering exceptional service.
           </p>
           <div className="w-20 h-1 bg-gradient-to-r from-amber-400 to-yellow-600 mx-auto mt-4 rounded-full"></div>
-        </div>
-
-        {/* Department Overview */}
-        <div className="mb-8">
-          <h3 className="text-xl font-bold text-gray-800 mb-6 text-center">Our Expert Departments</h3>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
-            {departments.map((dept, index) => (
-              <div 
-                key={index}
-                className="text-center p-3 rounded-lg bg-white shadow-md border border-amber-100 hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5"
-              >
-                <div className={`w-10 h-10 bg-gradient-to-r ${dept.color} rounded-full flex items-center justify-center mx-auto mb-2 text-white`}>
-                  <Building className="w-5 h-5" />
-                </div>
-                <h4 className="font-semibold text-gray-800 text-xs mb-1">{dept.name}</h4>
-                <div className="text-lg font-bold text-amber-600">{dept.count}</div>
-                <div className="text-xs text-gray-500">Team Lead</div>
-              </div>
-            ))}
-          </div>
         </div>
 
         {/* Team Grid */}
@@ -273,24 +253,7 @@ const TeamSection = () => {
           ))}
         </div>
 
-        {/* CTA Section */}
-        <div className="text-center mt-12">
-          <div className="bg-gradient-to-r from-amber-50 to-yellow-50 rounded-xl p-5 lg:p-6 border border-amber-100">
-            <h3 className="text-xl font-bold text-gray-800 mb-3">Ready to Work With Our Experts?</h3>
-            <p className="text-sm text-gray-600 mb-4 max-w-2xl mx-auto">
-              Our leadership team is ready to discuss your project and provide personalized solutions 
-              tailored to your investment goals.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-3 justify-center">
-              <button className="bg-gradient-to-r from-amber-500 to-yellow-600 text-white px-5 py-2.5 rounded-lg font-semibold text-sm hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5">
-                Schedule Consultation
-              </button>
-              <button className="border border-amber-500 text-amber-700 px-5 py-2.5 rounded-lg font-semibold text-sm hover:bg-amber-50 transition-all duration-300">
-                Meet the Full Team
-              </button>
-            </div>
-          </div>
-        </div>
+
       </div>
     </section>
   );

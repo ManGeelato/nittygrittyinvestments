@@ -33,7 +33,7 @@ const AboutHero = () => {
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: 'url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2000&q=80")'
+          backgroundImage: 'url("/8.png")'
         }}
       >
         <div className="absolute inset-0 bg-gray-900/70 backdrop-blur-[1px]"></div>
@@ -70,7 +70,8 @@ const AboutHero = () => {
 
             {/* Description */}
             <p className="text-base text-gray-200 leading-relaxed">
-              For over 15 years, <strong className="text-white">Nitty Gritty Investment Company</strong> has been at the forefront of transforming spaces and investments through our comprehensive suite of services. From architectural marvels to pristine landscapes and immaculate cleaning solutions, we deliver quality that stands the test of time.
+              Nitty Gritty Investments was formed in the year 2013,<strong className="text-white">and</strong> has been at the forefront of transforming spaces and investments through our comprehensive suite of services. From architectural marvels to pristine landscapes and immaculate cleaning solutions, we deliver quality that stands the test of time.
+              The Company has built the reputation over the years by being Reliable And Trustworthy in dealing with Stakeholders
             </p>
 
             {/* Key Values */}

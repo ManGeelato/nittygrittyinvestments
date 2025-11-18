@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Building2, Leaf, Sparkles, ArrowRight, Check, Phone } from 'lucide-react';
 
+
 const ServicesOverview = () => {
   const [activeTab, setActiveTab] = useState(0);
 
@@ -27,8 +28,8 @@ const ServicesOverview = () => {
         { number: "98%", label: "Client Satisfaction" },
         { number: "20+", label: "Years Experience" }
       ],
-      image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&h=300&q=80",
-      thumbnail: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&h=75&q=80"
+      image: "/9.png",
+      thumbnail: "/9.png"
     },
     {
       id: 1,
@@ -52,8 +53,8 @@ const ServicesOverview = () => {
         { number: "50+", label: "Landscaping Projects" },
         { number: "100%", label: "Organic Options" }
       ],
-      image: "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&h=300&q=80",
-      thumbnail: "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&h=75&q=80"
+      image: "/IMG-20250127-WA0009.jpg",
+      thumbnail: "/IMG-20250127-WA0009.jpg"
     },
     {
       id: 2,
@@ -77,8 +78,8 @@ const ServicesOverview = () => {
         { number: "24/7", label: "Service Available" },
         { number: "15+", label: "Years in Business" }
       ],
-      image: "https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&h=300&q=80",
-      thumbnail: "https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&h=75&q=80"
+      image: "/12.png",
+      thumbnail: "/12.png"
     }
   ];
 

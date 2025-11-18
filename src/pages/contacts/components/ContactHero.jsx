@@ -7,7 +7,7 @@ const ContactHero = () => {
       icon: <Phone className="w-5 h-5" />,
       title: 'Call Us',
       description: 'Speak directly with our team',
-      details: ['011 524 6421', '011 524 6435', '073 288 8935'],
+      details: ['011 524 6421', '011 524 6435', '067 199 2309'],
       action: 'tel:0115246421',
       color: 'from-green-500 to-emerald-500'
     },

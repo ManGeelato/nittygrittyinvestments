@@ -6,64 +6,34 @@ const TimelineComponent = () => {
 
   const milestones = [
     {
-      year: 2008,
+      year: 2013,
       title: "Company Foundation",
       description: "Nitty Gritty was founded in Johannesburg with a focus on architectural services and small-scale property investments.",
       icon: <Building className="w-5 h-5" />,
       color: "from-amber-400 to-yellow-500",
       achievements: ["Founded in Johannesburg", "Initial focus on architecture", "First 10 projects completed"],
       stats: { projects: 10, team: 3, locations: 1 },
-      image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=300&q=80"
-    },
-    {
-      year: 2010,
-      title: "First Major Expansion",
-      description: "Expanded service offerings to include gardening services and secured our first corporate client contracts.",
-      icon: <TrendingUp className="w-5 h-5" />,
-      color: "from-amber-500 to-orange-500",
-      achievements: ["Added gardening services", "First corporate clients", "Team grew to 15 members"],
-      stats: { projects: 45, team: 15, locations: 1 },
-      image: "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=300&q=80"
-    },
-    {
-      year: 2013,
-      title: "Cleaning Division Launch",
-      description: "Launched professional cleaning services division, completing our comprehensive property management portfolio.",
-      icon: <Zap className="w-5 h-5" />,
-      color: "from-orange-500 to-amber-600",
-      achievements: ["Cleaning services launched", "100+ projects completed", "Industry recognition"],
-      stats: { projects: 120, team: 25, locations: 1 },
-      image: "https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=300&q=80"
+      image: "/8c48fb99-27d0-4211-b9d9-a803d6c046d8_removalai_preview.png"
     },
     {
       year: 2015,
-      title: "KZN Regional Office",
+      title: "First Major Expansion",
+      description: "Expanded service offerings to include construction services securing corporate client contracts.",
+      icon: <TrendingUp className="w-5 h-5" />,
+      color: "from-amber-500 to-orange-500",
+      achievements: ["First corporate clients", "Team grew to 15 members"],
+      stats: { projects: 45, team: 15, locations: 1 },
+      image: "/1.png"
+    },
+    {
+      year: 2017,
+      title: "Durban Regional Office",
       description: "Opened our first regional office in Durban, establishing presence in KwaZulu-Natal and expanding our reach.",
       icon: <MapPin className="w-5 h-5" />,
       color: "from-amber-600 to-yellow-600",
       achievements: ["Durban office opened", "Expanded to KZN province", "50+ new team members"],
       stats: { projects: 200, team: 75, locations: 2 },
-      image: "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=300&q=80"
-    },
-    {
-      year: 2018,
-      title: "Cape Town Expansion",
-      description: "Established Western Cape operations with our Cape Town office, becoming a truly national service provider.",
-      icon: <Users className="w-5 h-5" />,
-      color: "from-yellow-500 to-amber-400",
-      achievements: ["Cape Town office opened", "National coverage achieved", "Team exceeded 100 members"],
-      stats: { projects: 350, team: 120, locations: 3 },
-      image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=300&q=80"
-    },
-    {
-      year: 2020,
-      title: "Digital Transformation",
-      description: "Implemented comprehensive digital systems and launched our client portal for seamless service management.",
-      icon: <Target className="w-5 h-5" />,
-      color: "from-amber-300 to-yellow-400",
-      achievements: ["Digital client portal", "Streamlined operations", "Enhanced customer experience"],
-      stats: { projects: 420, team: 150, locations: 3 },
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=300&q=80"
+      image: "/7.png"
     },
     {
       year: 2022,
@@ -73,7 +43,7 @@ const TimelineComponent = () => {
       color: "from-amber-400 to-yellow-500",
       achievements: ["Service Excellence Award", "Sustainable Business Award", "Top Employer Recognition"],
       stats: { projects: 480, team: 180, locations: 3 },
-      image: "https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=300&q=80"
+      image: "/14.png"
     },
     {
       year: 2023,
@@ -85,15 +55,25 @@ const TimelineComponent = () => {
       stats: { projects: 500, team: 200, locations: 3 },
       image: "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=300&q=80"
     },
-    {
+     {
       year: 2024,
+      title: "Cleaning and Gardening Division Launch",
+      description: "Launched professional cleaning and gardening services division, completing our comprehensive property management portfolio.",
+      icon: <Zap className="w-5 h-5" />,
+      color: "from-orange-500 to-amber-600",
+      achievements: ["Cleaning services launched", "100+ projects completed", "Industry recognition"],
+      stats: { projects: 120, team: 25, locations: 1 },
+      image: "/11.png"
+    },
+    {
+      year: 2025,
       title: "Future Growth Vision",
       description: "Planning expansion into new African markets and developing innovative service solutions for the future.",
       icon: <Heart className="w-5 h-5" />,
       color: "from-orange-500 to-amber-600",
       achievements: ["African expansion plans", "Innovation lab launch", "Sustainable growth strategy"],
       stats: { projects: "600+", team: "250+", locations: "5+" },
-      image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=300&q=80",
+      image: "/5.png",
       future: true
     }
   ];

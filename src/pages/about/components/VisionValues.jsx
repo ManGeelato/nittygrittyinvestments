@@ -221,8 +221,8 @@ const VisionValues = () => {
                 <Users className="w-5 h-5" />
               </div>
               <div>
-                <p className="font-semibold text-sm">Mike Grundy</p>
-                <p className="text-amber-200 text-xs">Founder & CEO</p>
+                <p className="font-semibold text-sm">Michael Fakude</p>
+                <p className="text-amber-200 text-xs">Director & CEO</p>
               </div>
             </div>
           </div>

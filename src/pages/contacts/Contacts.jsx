@@ -11,8 +11,8 @@ function Contacts() {
     <div>
        <ContactHero/>
        <MultiLocationCards/>
-       <ContactForm/>
-       <InteractiveMap/>
+       {/* <ContactForm/> */}
+       {/* <InteractiveMap/> */}
        <OperatingHoursDisplay/>
        <SocialMediaLinks/>
     </div>

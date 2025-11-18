@@ -5,6 +5,7 @@ import ServiceBreakdown from "./components/ServiceBreakdown";
 import ServiceProcessTimeline from "./components/ServiceProcessTimeline";
 import ServiceBenefitsGrid from "./components/ServiceBenefitsGrid";
 import FAQAccordion from "./components/FAQAccordion";
+import Architecture from "./components/Architecture";
 
 function Services() {
   return (
@@ -12,9 +13,10 @@ function Services() {
       <ServicesHero />
       <ServiceCategories/>
       <ServiceBreakdown/>
-      <ServiceProcessTimeline/>
+      {/* <Architecture/> */}
+      {/* <ServiceProcessTimeline/>
       <ServiceBenefitsGrid/>
-      <FAQAccordion/>
+      <FAQAccordion/> */}
     </div>
   );
 }

@@ -2,7 +2,8 @@ import React from "react";
 import {
   createBrowserRouter,
   createRoutesFromElements,
-  RouterProvider,Link,
+  RouterProvider,
+  Link,
   Route,
 } from "react-router-dom";
 
@@ -13,20 +14,33 @@ import Contacts from "./pages/contacts/Contacts";
 import Services from "./pages/services/Services";
 import Projects from "./pages/projects/Projects";
 
+// SUB SERVICE PAGES
+import Architecture from "./pages/services/components/Architecture";
+import Gardening from "./pages/services/components/Gardening";
+import Cleaning from "./pages/services/components/Cleaning";
+
 function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path="/" element={<RootLayOut />}>
+
         {/* Home Page */}
         <Route index element={<Home />} />
 
-        {/* Other Pages */}
+        {/* Static Pages */}
         <Route path="about" element={<About />} />
         <Route path="contact" element={<Contacts />} />
-        <Route path="projects" element={<Projects/>} />
+        <Route path="projects" element={<Projects />} />
+
+        {/* SERVICES MAIN PAGE */}
         <Route path="services" element={<Services />} />
 
-        {/* Fallback Route for 404 */}
+        {/* SUB-SERVICES (IMPORTANT!) */}
+        <Route path="services/architecture" element={<Architecture />} />
+        <Route path="services/gardening" element={<Gardening />} />
+        <Route path="services/cleaning" element={<Cleaning />} />
+
+        {/* 404 Page */}
         <Route
           path="*"
           element={
@@ -38,8 +52,8 @@ function App() {
                 <p className="mt-4 text-gray-600">
                   The page you are looking for does not exist.
                 </p>
-                <Link 
-                  to="/" 
+                <Link
+                  to="/"
                   className="inline-block mt-6 px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
                 >
                   Go Home

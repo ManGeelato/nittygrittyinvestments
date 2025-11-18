@@ -257,20 +257,6 @@ const ServiceCategories = () => {
             </Link>
           ))}
         </div>
-
-        {/* Bottom CTA */}
-        <div className="text-center mt-8 px-2 sm:px-0">
-          <div className="bg-gradient-to-r from-amber-50 to-yellow-50 rounded-xl p-6 border border-amber-100 mx-2 sm:mx-0">
-            <h3 className="text-xl font-bold text-gray-800 mb-3">Need Multiple Services?</h3>
-            <p className="text-sm text-gray-600 mb-4 max-w-2xl mx-auto">
-              Many of our clients benefit from combining our services for comprehensive property management. 
-              Get discounted package deals when you bundle multiple services.
-            </p>
-            <button className="bg-gradient-to-r from-amber-500 to-yellow-600 text-white px-6 py-3 rounded-lg font-semibold text-base hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5">
-              Request Package Deal
-            </button>
-          </div>
-        </div>
       </div>
     </section>
   );

@@ -60,6 +60,66 @@ const Hero = () => {
 
       <div className="relative max-w-7xl mx-auto px-3 sm:px-4 lg:px-6">
         <div className="grid lg:grid-cols-2 gap-8 items-center min-h-[calc(100vh-4rem)] py-8 lg:py-12">
+          {/* Right Content - Images */}
+          <div className="relative lg:h-[500px] h-[350px]">
+            {/* Main Image Card */}
+            <div className="relative h-full rounded-xl overflow-hidden shadow-xl transform hover:scale-[1.02] transition-transform duration-500">
+              {/* Image with gradient overlay */}
+              <div className="absolute inset-0 bg-gradient-to-tr from-amber-900/40 via-amber-700/20 to-transparent z-10"></div>
+              
+              {/* Service Images */}
+              <img 
+                src={slides[currentSlide].image} 
+                alt={slides[currentSlide].title}
+                className="absolute inset-0 w-full h-full object-cover transition-opacity duration-500"
+                onError={(e) => {
+                  e.target.src = `https://via.placeholder.com/600x400/4A5568/FFFFFF?text=${encodeURIComponent(slides[currentSlide].title)}`;
+                }}
+              />
+
+              {/* Stat Card */}
+              <div className="absolute bottom-6 left-6 z-20 bg-white/95 backdrop-blur-sm rounded-lg p-4 shadow-lg">
+                <div className="text-2xl font-bold bg-gradient-to-r from-amber-600 to-amber-800 bg-clip-text text-transparent">
+                  {slides[currentSlide].stats.number}
+                </div>
+                <div className="text-sm text-gray-600 font-medium mt-0.5">
+                  {slides[currentSlide].stats.label}
+                </div>
+              </div>
+
+              {/* Floating Badge */}
+              <div className="absolute top-6 right-6 z-20 bg-amber-500 text-white px-3 py-1.5 rounded-full font-semibold shadow-lg text-sm">
+                Premium Service
+              </div>
+            </div>
+
+            {/* Additional Service Images Preview */}
+            <div className="flex gap-2 mt-4 justify-center">
+              {slides.map((slide, idx) => (
+                <button
+                  key={idx}
+                  onClick={() => setCurrentSlide(idx)}
+                  className={`w-16 h-12 rounded-lg overflow-hidden shadow-md transition-all duration-300 ${
+                    idx === currentSlide ? 'ring-2 ring-amber-500 scale-105' : 'opacity-70 hover:opacity-100'
+                  }`}
+                >
+                  <img 
+                    src={thumbnailImages[idx]} 
+                    alt={slide.title}
+                    className="w-full h-full object-cover"
+                    onError={(e) => {
+                      e.target.src = `https://via.placeholder.com/100x75/4A5568/FFFFFF?text=${encodeURIComponent(slide.title.split(' ')[0])}`;
+                    }}
+                  />
+                </button>
+              ))}
+            </div>
+
+            {/* Decorative Elements */}
+            <div className="absolute -top-3 -right-3 w-20 h-20 bg-amber-200 rounded-full blur-2xl opacity-60 animate-pulse"></div>
+            <div className="absolute -bottom-6 -left-6 w-28 h-28 bg-amber-300 rounded-full blur-2xl opacity-40 animate-pulse" style={{ animationDelay: '1s' }}></div>
+          </div>
+
           {/* Left Content */}
           <div className="space-y-6 animate-fadeIn">
             {/* Badge */}
@@ -120,66 +180,6 @@ const Hero = () => {
                 </div>
               ))}
             </div>
-          </div>
-
-          {/* Right Content - Images */}
-          <div className="relative lg:h-[500px] h-[350px]">
-            {/* Main Image Card */}
-            <div className="relative h-full rounded-xl overflow-hidden shadow-xl transform hover:scale-[1.02] transition-transform duration-500">
-              {/* Image with gradient overlay */}
-              <div className="absolute inset-0 bg-gradient-to-tr from-amber-900/40 via-amber-700/20 to-transparent z-10"></div>
-              
-              {/* Service Images */}
-              <img 
-                src={slides[currentSlide].image} 
-                alt={slides[currentSlide].title}
-                className="absolute inset-0 w-full h-full object-cover transition-opacity duration-500"
-                onError={(e) => {
-                  e.target.src = `https://via.placeholder.com/600x400/4A5568/FFFFFF?text=${encodeURIComponent(slides[currentSlide].title)}`;
-                }}
-              />
-
-              {/* Stat Card */}
-              <div className="absolute bottom-6 left-6 z-20 bg-white/95 backdrop-blur-sm rounded-lg p-4 shadow-lg">
-                <div className="text-2xl font-bold bg-gradient-to-r from-amber-600 to-amber-800 bg-clip-text text-transparent">
-                  {slides[currentSlide].stats.number}
-                </div>
-                <div className="text-sm text-gray-600 font-medium mt-0.5">
-                  {slides[currentSlide].stats.label}
-                </div>
-              </div>
-
-              {/* Floating Badge */}
-              <div className="absolute top-6 right-6 z-20 bg-amber-500 text-white px-3 py-1.5 rounded-full font-semibold shadow-lg text-sm">
-                Premium Service
-              </div>
-            </div>
-
-            {/* Additional Service Images Preview */}
-            <div className="flex gap-2 mt-4 justify-center">
-              {slides.map((slide, idx) => (
-                <button
-                  key={idx}
-                  onClick={() => setCurrentSlide(idx)}
-                  className={`w-16 h-12 rounded-lg overflow-hidden shadow-md transition-all duration-300 ${
-                    idx === currentSlide ? 'ring-2 ring-amber-500 scale-105' : 'opacity-70 hover:opacity-100'
-                  }`}
-                >
-                  <img 
-                    src={thumbnailImages[idx]} 
-                    alt={slide.title}
-                    className="w-full h-full object-cover"
-                    onError={(e) => {
-                      e.target.src = `https://via.placeholder.com/100x75/4A5568/FFFFFF?text=${encodeURIComponent(slide.title.split(' ')[0])}`;
-                    }}
-                  />
-                </button>
-              ))}
-            </div>
-
-            {/* Decorative Elements */}
-            <div className="absolute -top-3 -right-3 w-20 h-20 bg-amber-200 rounded-full blur-2xl opacity-60 animate-pulse"></div>
-            <div className="absolute -bottom-6 -left-6 w-28 h-28 bg-amber-300 rounded-full blur-2xl opacity-40 animate-pulse" style={{ animationDelay: '1s' }}></div>
           </div>
         </div>
 

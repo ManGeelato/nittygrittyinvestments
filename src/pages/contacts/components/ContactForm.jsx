@@ -431,7 +431,7 @@ const ContactForm = () => {
                   className="inline-flex items-center gap-2 bg-red-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-red-700 transition-colors"
                 >
                   <Phone className="w-4 h-4" />
-                  073 288 8935
+                  067 199 2309
                 </a>
               </div>
             </div>

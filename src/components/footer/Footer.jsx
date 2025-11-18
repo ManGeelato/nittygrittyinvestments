@@ -32,12 +32,12 @@ const Footer = () => {
     {
       name: 'KwaZulu-Natal Office',
       address: '1 Devon Road, Pinetown, Durban 3610',
-      phone: ['073 288 8935']
+      phone: ['067 199 2309']
     },
     {
       name: 'Cape Town Office',
       address: '15 Suikerbos Street, Malmesbury 7300',
-      phone: ['073 288 8935']
+      phone: ['067 199 2309']
     }
   ];
 
@@ -291,8 +291,8 @@ const Footer = () => {
 
             <div className="flex items-center gap-2">
               <span className="text-sm text-gray-400">Designed by</span>
-              <a href="#" className="text-amber-400 hover:text-amber-300 font-semibold text-sm flex items-center gap-1">
-                Your Agency
+              <a href="https://www.linkedin.com/in/emmanuel-kaome-0247b7224/" target="_blank" className="text-amber-400 hover:text-amber-300 font-semibold text-sm flex items-center gap-1">
+                  Emmanuel Gadaffi Kaome
                 <ExternalLink size={14} />
               </a>
             </div>
@@ -312,13 +312,32 @@ const Footer = () => {
       </div>
 
       {/* Back to Top Button */}
-      <button
+      {/* <button
         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
         className="fixed bottom-8 right-8 w-12 h-12 bg-amber-500 hover:bg-amber-600 text-white rounded-full shadow-lg flex items-center justify-center transition-all duration-300 hover:scale-110 z-40"
         aria-label="Back to top"
       >
         <ArrowRight size={20} className="rotate-[-90deg]" />
-      </button>
+      </button> */}
+      <a
+        href={`https://wa.me/27676044063?text=${encodeURIComponent(
+          "Hello 👋\nI'm interested in Nitty Gritty Investments' services (Architecture / Gardening / Cleaning).\nPlease assist me when you are available. Thank you!"
+        )}`}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-8 right-8 w-12 h-12 bg-[#25D366] hover:bg-[#1ebe5d] text-white rounded-full shadow-lg flex items-center justify-center transition-all duration-300 hover:scale-110 z-40"
+        aria-label="Chat on WhatsApp"
+      >
+        <svg 
+          xmlns="http://www.w3.org/2000/svg" 
+          width="28" 
+          height="28" 
+          fill="currentColor" 
+          viewBox="0 0 24 24"
+        >
+          <path d="M12.04 2C6.58 2 2.2 6.37 2.2 11.82c0 2.08.61 4.03 1.78 5.72L2 22l4.63-1.9c1.6.87 3.4 1.32 5.28 1.32 5.46 0 9.84-4.37 9.84-9.82C21.75 6.37 17.38 2 12.04 2zm0 17.94c-1.7 0-3.36-.46-4.8-1.34l-.34-.2-2.75 1.13.73-2.84-.22-.29c-1.1-1.52-1.67-3.32-1.67-5.1 0-4.73 3.86-8.58 8.61-8.58 4.73 0 8.59 3.85 8.59 8.58-.01 4.73-3.87 8.64-8.62 8.64zm4.84-6.45c-.26-.13-1.53-.76-1.77-.85-.24-.09-.42-.13-.6.13-.18.26-.69.85-.85 1.03-.16.18-.32.2-.58.07-.26-.13-1.09-.4-2.07-1.28-.77-.68-1.29-1.52-1.44-1.78-.15-.26-.02-.4.11-.53.12-.12.26-.32.39-.48.13-.16.17-.26.26-.43.09-.18.04-.33-.02-.46-.07-.13-.6-1.44-.82-1.97-.22-.53-.44-.46-.6-.46h-.52c-.18 0-.46.07-.7.33-.24.26-.92.9-.92 2.2 0 1.3.95 2.55 1.08 2.73.13.18 1.86 3 4.52 4.19.63.27 1.12.43 1.51.55.63.2 1.2.17 1.65.1.5-.07 1.53-.63 1.75-1.24.22-.61.22-1.12.15-1.24-.06-.12-.24-.19-.5-.32z"/>
+        </svg>
+      </a>
     </footer>
   );
 };
