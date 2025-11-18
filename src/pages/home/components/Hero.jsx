@@ -122,6 +122,13 @@ const Hero = () => {
 
           {/* Left Content */}
           <div className="space-y-6 animate-fadeIn">
+            {/* Badge */}
+            <div className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-amber-100 rounded-full text-amber-800 text-xs font-medium hidden">
+              <Star size={14} className="fill-amber-600 text-amber-600" />
+              <span>Trusted Investment Company Since 2000</span>
+            </div>
+
+
             {/* Main Heading */}
             <div className="space-y-3">
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 leading-snug">
