@@ -4,11 +4,11 @@ import { Building2, Briefcase, Award } from 'lucide-react';
 const ClientsLogoSlider = () => {
   // Your real image logos stored in /public
   const clients = [
-    { id: 1, image: "/standard.PNG", industry: "Technology" },
-    { id: 2, image: "/oldmutual.PNG", industry: "Real Estate" },
-    { id: 3, image: "/fnb.PNG", industry: "Retail" },
+    { id: 1, image: "/fnb.PNG", industry: "Technology" },
+    { id: 2, image: "/checkers.PNG", industry: "Real Estate" },
+    { id: 3, image: "/standard.PNG", industry: "Retail" },
     { id: 4, image: "/psg.PNG", industry: "Residential" },
-    { id: 5, image: "/checkers.PNG", industry: "Healthcare" },
+    { id: 5, image: "/oldmutual.PNG", industry: "Healthcare" },
   ];
 
   const duplicatedClients = [...clients, ...clients];
