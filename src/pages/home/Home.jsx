@@ -15,7 +15,7 @@ function Home() {
       {/* <StatsHighlights/> */}
       {/* <FeaturedProjectsCarousel/> */}
       {/* <ServiceAreasMap/> */}
-      <CTABanner/>
+      {/* <CTABanner/> */}
       <ClientsLogoSlider/>
     </div>
   );
