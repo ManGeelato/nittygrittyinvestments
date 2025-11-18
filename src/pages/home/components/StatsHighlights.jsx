@@ -40,7 +40,7 @@ const StatsHighlights = () => {
       color: 'from-green-500 to-green-600',
       bgColor: 'bg-green-50',
       iconColor: 'text-green-600',
-      description: 'Industry expertise since 2000'
+      description: 'Industry expertise since 2013'
     },
     {
       icon: MapPin,

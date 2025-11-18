@@ -64,17 +64,14 @@ const Footer = () => {
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 bg-gradient-to-br from-[#A67C00] to-[#A67C00] rounded-lg flex items-center justify-center shadow-lg">
-                <span className="text-white font-bold text-xl">NG</span>
-              </div>
               <div>
                 <h3 className="text-2xl font-bold text-white">Nitty Gritty</h3>
-                <p className="text-xs text-amber-400 tracking-wider">INVESTMENT COMPANY</p>
+                <p className="text-xs text-amber-400 tracking-wider">INVESTMENTS</p>
               </div>
             </div>
             
             <p className="text-gray-400 leading-relaxed mb-6">
-              Leading South African investment company delivering excellence in Architecture, Gardening, and Cleaning services since 2000.
+              Leading South African investment company delivering excellence in Architecture, Gardening, and Cleaning services since 2013.
             </p>
 
             {/* Certifications */}
