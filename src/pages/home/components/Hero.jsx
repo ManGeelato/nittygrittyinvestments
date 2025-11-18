@@ -94,7 +94,7 @@ const Hero = () => {
             </div>
 
             {/* Additional Service Images Preview */}
-            <div className="flex gap-2 mt-4 justify-center">
+            {/* <div className="flex gap-2 mt-4 justify-center">
               {slides.map((slide, idx) => (
                 <button
                   key={idx}
@@ -113,7 +113,7 @@ const Hero = () => {
                   />
                 </button>
               ))}
-            </div>
+            </div> */}
 
             {/* Decorative Elements */}
             <div className="absolute -top-3 -right-3 w-20 h-20 bg-amber-200 rounded-full blur-2xl opacity-60 animate-pulse"></div>
@@ -123,9 +123,13 @@ const Hero = () => {
           {/* Left Content */}
           <div className="space-y-6 animate-fadeIn">
             {/* Badge */}
-            <div className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-amber-100 rounded-full text-amber-800 text-xs font-medium hidden">
+            {/* <div className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-amber-100 rounded-full text-amber-800 text-xs font-medium hidden">
               <Star size={14} className="fill-amber-600 text-amber-600" />
               <span>Trusted Investment Company Since 2000</span>
+            </div> */}
+            <div className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-amber-100 rounded-full text-amber-800 text-xs font-medium"> 
+              <Star size={14} className="fill-amber-600 text-amber-600" /> 
+              <span>Trusted Investment Company Since 2013</span> 
             </div>
 
 
