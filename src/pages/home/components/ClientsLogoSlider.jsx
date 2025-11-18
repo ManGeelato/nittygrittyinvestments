@@ -9,8 +9,6 @@ const ClientsLogoSlider = () => {
     { id: 3, image: "/fnb.PNG", industry: "Retail" },
     { id: 4, image: "/psg.PNG", industry: "Residential" },
     { id: 5, image: "/checkers.PNG", industry: "Healthcare" },
-    { id: 6, image: "/standard.PNG", industry: "Technology" },
-    { id: 7, image: "/oldmutual.PNG", industry: "Real Estate" },
   ];
 
   const duplicatedClients = [...clients, ...clients];
