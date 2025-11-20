@@ -13,7 +13,7 @@ function Contacts() {
        {/* <ContactForm/> */}
        {/* <InteractiveMap/> */}
        <SocialMediaLinks/>
-       <OperatingHoursDisplay/>
+       {/* <OperatingHoursDisplay/> */}
        <MultiLocationCards/>
     </div>
   )
