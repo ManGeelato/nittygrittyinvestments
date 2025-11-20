@@ -28,16 +28,6 @@ const Footer = () => {
       address: '3 Linksfield Road, Dunvegan, Edenvale 1609',
       phone: ['011 524 6421', '011 524 6435'],
       isHeadOffice: true
-    },
-    {
-      name: 'KwaZulu-Natal Office',
-      address: '1 Devon Road, Pinetown, Durban 3610',
-      phone: ['067 199 2309']
-    },
-    {
-      name: 'Cape Town Office',
-      address: '15 Suikerbos Street, Malmesbury 7300',
-      phone: ['067 199 2309']
     }
   ];
 

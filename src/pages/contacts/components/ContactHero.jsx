@@ -23,7 +23,7 @@ const ContactHero = () => {
       icon: <MapPin className="w-5 h-5" />,
       title: 'Visit Us',
       description: 'Our office locations',
-      details: ['Johannesburg • Durban • Cape Town'],
+      details: ['Johannesburg'],
       action: '#locations',
       color: 'from-amber-500 to-orange-500'
     },

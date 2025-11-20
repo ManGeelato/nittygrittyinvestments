@@ -76,7 +76,7 @@ const ProjectsHero = () => {
           </div>
 
           {/* Search Bar */}
-          <div className="max-w-2xl mx-auto mb-6">
+          {/* <div className="max-w-2xl mx-auto mb-6">
             <div className="relative group">
               <div className="absolute inset-0 bg-gradient-to-r from-[#A67C00] to-[#A67C00] rounded-xl blur opacity-20 group-hover:opacity-30 transition-opacity"></div>
               <div className="relative flex items-center bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl overflow-hidden">
@@ -95,7 +95,7 @@ const ProjectsHero = () => {
                 </button>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
 
         {/* Category Filter Cards */}
@@ -169,7 +169,7 @@ const ProjectsHero = () => {
         </div>
 
         {/* Filter Options */}
-        <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
+        {/* <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
           <button className="flex items-center gap-2 px-4 py-2 bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg hover:bg-white/10 transition-all duration-300 text-xs font-medium">
             <SlidersHorizontal size={16} />
             <span>More Filters</span>
@@ -180,7 +180,7 @@ const ProjectsHero = () => {
               {selectedCategory === 'all' ? 'All Projects' : categories.find(c => c.id === selectedCategory)?.name}
             </span>
           </div>
-        </div>
+        </div> */}
 
         {/* Decorative Bottom Wave */}
         <div className="absolute bottom-0 left-0 right-0 pointer-events-none">

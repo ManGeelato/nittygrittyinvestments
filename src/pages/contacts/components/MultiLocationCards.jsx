@@ -117,230 +117,193 @@ const MultiLocationCards = () => {
         </div>
 
         {/* Location Cards Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {officeLocations.map((office, index) => (
-            <div 
-              key={office.id}
-              className="group bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden hover:shadow-lg transition-all duration-500 hover:-translate-y-1"
-            >
-              {/* Office Header with Image */}
-              <div className="relative">
-                {/* Image Placeholder */}
-                <div className={`h-40 bg-gradient-to-br ${
-                  office.id === 'johannesburg' ? 'from-amber-100 to-yellow-200' :
-                  office.id === 'durban' ? 'from-green-100 to-emerald-200' :
-                  'from-blue-100 to-cyan-200'
-                } relative overflow-hidden`}>
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-center">
-                      <MapPin className={`w-10 h-10 mx-auto mb-2 ${
-                        office.id === 'johannesburg' ? 'text-amber-600' :
-                        office.id === 'durban' ? 'text-green-600' :
-                        'text-blue-600'
-                      }`} />
-                      <p className="font-semibold text-gray-700 text-sm">{office.city} Office</p>
-                      <p className="text-xs text-gray-600">Professional Service Image</p>
+        <div className="w-full flex justify-center">
+          <div className="grid grid-cols-1 place-items-center">
+            {officeLocations
+              .filter((office) => office.id === "johannesburg")
+              .map((office) => (
+                <div 
+                  key={office.id}
+                  className="group bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden hover:shadow-lg transition-all duration-500 hover:-translate-y-1 max-w-2xl w-full"
+                >
+                  {/* Office Header with Image */}
+                  <div className="relative">
+                    {/* Image Placeholder */}
+                    <div className={`h-48 bg-gradient-to-br ${
+                      office.id === 'johannesburg' ? 'from-amber-100 to-yellow-200' :
+                      'from-blue-100 to-cyan-200'
+                    } relative overflow-hidden`}>
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <div className="text-center">
+                          <MapPin className="w-12 h-12 mx-auto mb-2 text-amber-600" />
+                          <p className="font-semibold text-gray-700 text-sm">Our {office.city} Head Office</p>
+                          {/* <p className="text-xs text-gray-600">Professional Service Image</p> */}
+                        </div>
+                      </div>
+
+                      {/* Badge */}
+                      <div className="absolute top-3 left-3">
+                        <span className="px-3 py-1 text-xs font-semibold rounded-full bg-amber-500 text-white">
+                          {office.badge}
+                        </span>
+                      </div>
                     </div>
-                  </div>
-                  
-                  {/* Badge */}
-                  <div className="absolute top-3 left-3">
-                    <span className={`px-2 py-0.5 text-xs font-semibold rounded-full ${
-                      office.id === 'johannesburg' ? 'bg-amber-500 text-white' :
-                      office.id === 'durban' ? 'bg-green-500 text-white' :
-                      'bg-blue-500 text-white'
-                    }`}>
-                      {office.badge}
-                    </span>
-                  </div>
-                </div>
 
-                {/* Office Title */}
-                <div className="absolute bottom-3 left-3 right-3">
-                  <h3 className="text-xl font-bold text-white drop-shadow-lg">{office.city}</h3>
-                  <p className="text-amber-100 font-semibold drop-shadow-md text-sm">{office.title}</p>
-                </div>
-              </div>
-
-              {/* Office Content */}
-              <div className="p-4">
-                {/* Address */}
-                <div className="flex items-start gap-2 mb-3">
-                  <MapPin className={`w-4 h-4 mt-0.5 flex-shrink-0 ${
-                    office.id === 'johannesburg' ? 'text-amber-500' :
-                    office.id === 'durban' ? 'text-green-500' :
-                    'text-blue-500'
-                  }`} />
-                  <div>
-                    <p className="text-gray-700 font-medium text-xs">Address</p>
-                    <p className="text-gray-600 text-xs">{office.address}</p>
+                    {/* Office Title */}
+                    {/* <div className="absolute bottom-3 left-3 right-3">
+                      <h3 className="text-2xl font-bold text-white drop-shadow-lg">{office.city}</h3>
+                      <p className="text-amber-100 font-semibold drop-shadow-md text-sm">{office.title}</p>
+                    </div> */}
                   </div>
-                </div>
 
-                {/* Contact Information */}
-                <div className="space-y-2 mb-3">
-                  {/* Phone Numbers */}
-                  <div className="flex items-start gap-2">
-                    <Phone className={`w-3 h-3 mt-0.5 flex-shrink-0 ${
-                      office.id === 'johannesburg' ? 'text-amber-500' :
-                      office.id === 'durban' ? 'text-green-500' :
-                      'text-blue-500'
-                    }`} />
-                    <div>
-                      <p className="text-gray-700 font-medium text-xs">Phone</p>
-                      <div className="space-y-0.5">
-                        {office.contact.phones.map((phone, phoneIndex) => (
-                          <a 
-                            key={phoneIndex}
-                            href={`tel:${phone}`}
-                            className="block text-gray-600 text-xs hover:text-amber-600 transition-colors"
-                          >
-                            {phone}
-                          </a>
-                        ))}
-                        <div className="flex items-center gap-1 mt-0.5">
-                          <span className="text-xs text-gray-500">Emergency:</span>
-                          <a 
-                            href={`tel:${office.contact.emergency}`}
-                            className="text-xs text-red-600 hover:text-red-700 font-semibold"
-                          >
-                            {office.contact.emergency}
-                          </a>
+                  {/* Office Content */}
+                  <div className="p-6">
+                    {/* Address */}
+                    <div className="flex items-start gap-3 mb-4">
+                      <MapPin className="w-5 h-5 mt-0.5 text-amber-500" />
+                      <div>
+                        <p className="text-gray-700 font-medium text-sm">Address</p>
+                        <p className="text-gray-600 text-sm">{office.address}</p>
+                      </div>
+                    </div>
+
+                    {/* Phones */}
+                    <div className="space-y-3 mb-4">
+                      <div className="flex items-start gap-3">
+                        <Phone className="w-4 h-4 mt-0.5 text-amber-500" />
+                        <div>
+                          <p className="text-gray-700 font-medium text-sm">Phone</p>
+                          <div className="space-y-1">
+                            {office.contact.phones.map((phone, i) => (
+                              <a 
+                                key={i}
+                                href={`tel:${phone}`}
+                                className="block text-gray-600 text-sm hover:text-amber-600"
+                              >
+                                {phone}
+                              </a>
+                            ))}
+                            <div className="flex items-center gap-1 mt-1">
+                              <span className="text-sm text-gray-500">Emergency:</span>
+                              <a 
+                                href={`tel:${office.contact.emergency}`}
+                                className="text-sm text-red-600 font-semibold"
+                              >
+                                {office.contact.emergency}
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Emails */}
+                      <div className="flex items-start gap-3">
+                        <Mail className="w-4 h-4 mt-0.5 text-amber-500" />
+                        <div>
+                          <p className="text-gray-700 font-medium text-sm">Email</p>
+                          <div className="space-y-1">
+                            {office.contact.emails.map((email, i) => (
+                              <a 
+                                key={i}
+                                href={`mailto:${email}`}
+                                className="block text-gray-600 text-sm hover:text-amber-600 truncate"
+                              >
+                                {email}
+                              </a>
+                            ))}
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
 
-                  {/* Email Addresses */}
-                  <div className="flex items-start gap-2">
-                    <Mail className={`w-3 h-3 mt-0.5 flex-shrink-0 ${
-                      office.id === 'johannesburg' ? 'text-amber-500' :
-                      office.id === 'durban' ? 'text-green-500' :
-                      'text-blue-500'
-                    }`} />
-                    <div>
-                      <p className="text-gray-700 font-medium text-xs">Email</p>
-                      <div className="space-y-0.5">
-                        {office.contact.emails.map((email, emailIndex) => (
-                          <a 
-                            key={emailIndex}
-                            href={`mailto:${email}`}
-                            className="block text-gray-600 text-xs hover:text-amber-600 transition-colors truncate"
-                          >
-                            {email}
-                          </a>
+                    {/* Hours */}
+                    <div className="mb-4 p-3 bg-gray-50 rounded-lg">
+                      <div className="flex items-center gap-2 mb-2">
+                        <Clock className="w-4 h-4 text-amber-500" />
+                        <span className="text-sm font-semibold text-gray-700">Operating Hours</span>
+                      </div>
+                      <div className="space-y-1 text-sm text-gray-600">
+                        <div className="flex justify-between">
+                          <span>Mon - Fri:</span>
+                          <span>{office.hours.weekdays}</span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span>Saturday:</span>
+                          <span>{office.hours.saturday}</span>
+                        </div>
+                        <div className="flex justify-between text-gray-400">
+                          <span>Sunday:</span>
+                          <span>{office.hours.sunday}</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Team */}
+                    <div className="mb-4 p-3 bg-gray-50 rounded-lg">
+                      <div className="flex items-center gap-2 mb-2">
+                        <Users className="w-4 h-4 text-amber-500" />
+                        <span className="text-sm font-semibold text-gray-700">Our Team</span>
+                      </div>
+                      <div className="space-y-1 text-sm text-gray-600">
+                        <div>{office.team.size}</div>
+                        <div>Manager: {office.team.manager}</div>
+                        <div className="text-gray-500">Specialties: {office.team.specialties.join(', ')}</div>
+                      </div>
+                    </div>
+
+                    {/* Amenities */}
+                    <div className="mb-4">
+                      <h4 className="text-sm font-semibold text-gray-700 mb-2">Office Amenities</h4>
+                      <div className="grid grid-cols-2 gap-2">
+                        {office.amenities.map((a, i) => (
+                          <div key={i} className="flex items-center gap-2 text-sm text-gray-600">
+                            <div className="text-amber-500">
+                              {a.icon}
+                            </div>
+                            {a.text}
+                          </div>
                         ))}
                       </div>
                     </div>
-                  </div>
-                </div>
 
-                {/* Operating Hours */}
-                <div className="mb-3 p-2 bg-gray-50 rounded-lg">
-                  <div className="flex items-center gap-1 mb-1">
-                    <Clock className={`w-3 h-3 ${
-                      office.id === 'johannesburg' ? 'text-amber-500' :
-                      office.id === 'durban' ? 'text-green-500' :
-                      'text-blue-500'
-                    }`} />
-                    <span className="text-xs font-semibold text-gray-700">Operating Hours</span>
-                  </div>
-                  <div className="space-y-0.5 text-xs text-gray-600">
-                    <div className="flex justify-between">
-                      <span>Mon - Fri:</span>
-                      <span className="font-medium">{office.hours.weekdays}</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span>Saturday:</span>
-                      <span className="font-medium">{office.hours.saturday}</span>
-                    </div>
-                    <div className="flex justify-between text-gray-400">
-                      <span>Sunday:</span>
-                      <span className="font-medium">{office.hours.sunday}</span>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Team Information */}
-                <div className="mb-3 p-2 bg-gray-50 rounded-lg">
-                  <div className="flex items-center gap-1 mb-1">
-                    <Users className={`w-3 h-3 ${
-                      office.id === 'johannesburg' ? 'text-amber-500' :
-                      office.id === 'durban' ? 'text-green-500' :
-                      'text-blue-500'
-                    }`} />
-                    <span className="text-xs font-semibold text-gray-700">Our Team</span>
-                  </div>
-                  <div className="space-y-0.5 text-xs text-gray-600">
-                    <div>{office.team.size}</div>
-                    <div>Manager: {office.team.manager}</div>
-                    <div className="text-gray-500">Specialties: {office.team.specialties.join(', ')}</div>
-                  </div>
-                </div>
-
-                {/* Amenities */}
-                <div className="mb-3">
-                  <h4 className="text-xs font-semibold text-gray-700 mb-1">Office Amenities</h4>
-                  <div className="grid grid-cols-2 gap-1">
-                    {office.amenities.map((amenity, amenityIndex) => (
-                      <div key={amenityIndex} className="flex items-center gap-1 text-xs text-gray-600">
-                        <div className={`${
-                          office.id === 'johannesburg' ? 'text-amber-500' :
-                          office.id === 'durban' ? 'text-green-500' :
-                          'text-blue-500'
-                        }`}>
-                          {amenity.icon}
-                        </div>
-                        {amenity.text}
+                    {/* Services */}
+                    <div className="mb-4">
+                      <h4 className="text-sm font-semibold text-gray-700 mb-2">Key Services</h4>
+                      <div className="space-y-1">
+                        {office.services.map((service, i) => (
+                          <div key={i} className="flex items-center gap-2 text-sm text-gray-600">
+                            <div className="w-2 h-2 rounded-full bg-amber-500"></div>
+                            {service}
+                          </div>
+                        ))}
                       </div>
-                    ))}
+                    </div>
+
+                    {/* Buttons */}
+                    <div className="flex gap-2 pt-4 border-t border-gray-100">
+                      <a
+                        href={`https://maps.google.com/?q=${office.address}`}
+                        target="_blank"
+                        className="flex-1 text-center py-2 text-sm font-semibold rounded bg-amber-500 text-white hover:bg-amber-600"
+                      >
+                        Get Directions
+                      </a>
+                      <a
+                        href={`tel:${office.contact.phones[0]}`}
+                        className="flex-1 text-center py-2 text-sm font-semibold border border-gray-300 text-gray-700 rounded"
+                      >
+                        Call Office
+                      </a>
+                    </div>
                   </div>
                 </div>
-
-                {/* Services */}
-                <div className="mb-3">
-                  <h4 className="text-xs font-semibold text-gray-700 mb-1">Key Services</h4>
-                  <div className="space-y-0.5">
-                    {office.services.map((service, serviceIndex) => (
-                      <div key={serviceIndex} className="flex items-center gap-1 text-xs text-gray-600">
-                        <div className={`w-1.5 h-1.5 rounded-full ${
-                          office.id === 'johannesburg' ? 'bg-amber-500' :
-                          office.id === 'durban' ? 'bg-green-500' :
-                          'bg-blue-500'
-                        }`}></div>
-                        {service}
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Action Buttons */}
-                <div className="flex gap-1 pt-3 border-t border-gray-100">
-                  <a
-                    href={`https://maps.google.com/?q=${office.address}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`flex-1 text-center py-1.5 px-2 text-xs font-semibold rounded transition-all duration-300 ${
-                      office.id === 'johannesburg' ? 
-                      'bg-amber-500 text-white hover:bg-amber-600' :
-                      office.id === 'durban' ? 
-                      'bg-green-500 text-white hover:bg-green-600' :
-                      'bg-blue-500 text-white hover:bg-blue-600'
-                    }`}
-                  >
-                    Get Directions
-                  </a>
-                  <a
-                    href={`tel:${office.contact.phones[0]}`}
-                    className="flex-1 text-center py-1.5 px-2 text-xs font-semibold border border-gray-300 text-gray-700 rounded hover:bg-gray-50 transition-all duration-300"
-                  >
-                    Call Office
-                  </a>
-                </div>
-              </div>
-            </div>
-          ))}
+              ))}
+          </div>
         </div>
+
+
+
+
 
         {/* Bottom CTA */}
         <div className="text-center mt-10">

@@ -4,12 +4,9 @@ import { CheckCircle } from 'lucide-react';
 
 const Gardening = () => {
   const gardeningImages = [
-    '/garden1.jpg',
-    '/garden2.jpg',
-    '/garden3.jpg',
-    '/garden4.jpg',
-    '/garden5.jpg',
-    '/garden6.jpg',
+    '/13.png',
+    '/481047747_594395333427392_7274881059531875022_n.jpg',
+    '/IMG-20250127-WA0009.jpg',
   ];
 
 return (

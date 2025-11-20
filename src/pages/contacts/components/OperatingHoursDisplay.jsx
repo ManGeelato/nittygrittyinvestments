@@ -329,7 +329,7 @@ const OperatingHoursDisplay = () => {
                 <h4 className="font-bold text-gray-900 mb-2">Visit Us</h4>
                 <p className="text-gray-600 mb-3">During business hours</p>
                 <div className="text-amber-600 font-semibold">
-                  3 Locations
+                  1 Location
                 </div>
               </div>
             </div>

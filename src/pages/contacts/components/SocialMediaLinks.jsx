@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { 
   Facebook, 
   Instagram, 
@@ -14,6 +14,10 @@ import {
 } from 'lucide-react';
 
 const SocialMediaLinks = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const toggleModal = () => setIsModalOpen(!isModalOpen);
+
   const socialPlatforms = [
     {
       name: 'Facebook',
@@ -71,14 +75,14 @@ const SocialMediaLinks = () => {
     {
       platform: 'Instagram',
       type: 'Project Reveal',
-      title: 'Johannesburg Office Renovation',
+      title: 'FNB Johannesburg Office Renovation',
       engagement: '245 likes, 42 comments',
       image: '/images/social/instagram-project.jpg'
     },
     {
       platform: 'Facebook',
       type: 'Client Testimonial',
-      title: 'Client Success Story - Durban Garden',
+      title: 'Client Success Story - Edenvale Garden',
       engagement: '189 reactions, 31 shares',
       image: '/images/social/facebook-testimonial.jpg'
     },
@@ -98,20 +102,46 @@ const SocialMediaLinks = () => {
     { icon: <TrendingUp className="w-5 h-5" />, value: '200+', label: 'Projects Shared' }
   ];
 
+  const testimonial = `I recently had a challenge when I wanted to sell my house after I realized that my house plan was not registered with the municipality. I called NITTY GRITTY Investments for assistance. The Director, bro Mike wasn't in town but arranged for his assistant to come to personally hear my story. The following day he was at my house assessing the place. He gave me a management plan for the whole process with a breakdown of costs and time frames. I was updated at all times during the process and everything was done and delivered professionally. I had my plan approved on time as promised and I was very happy to get my house on the market as planned. Bro Mike further assisted me with the acquisition of a professional electrician for my coc. Thanks to Nitty Gritty for the professionalism and further support after the original work. Molatelo Ramokgopa`;
+
+  const truncatedTestimonial = testimonial.split('arranged for his')[0] + 'arranged for his...';
+
   return (
     <section className="py-20 bg-gradient-to-b from-white to-gray-50">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Connect With <span className="bg-gradient-to-r from-amber-500 to-yellow-600 bg-clip-text text-transparent">Nitty Gritty</span>
+            Nitty Gritty <span className="bg-gradient-to-r from-amber-500 to-yellow-600 bg-clip-text text-transparent">Testimonials</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Follow us on social media for project updates, expert tips, behind-the-scenes content, 
-            and inspiring transformations from across South Africa.
+            {truncatedTestimonial}{' '}
+            <button 
+              onClick={toggleModal} 
+              className="text-amber-500 font-semibold underline hover:text-amber-600"
+            >
+              Read More
+            </button>
           </p>
           <div className="w-24 h-1 bg-gradient-to-r from-amber-400 to-yellow-600 mx-auto mt-6 rounded-full"></div>
         </div>
+
+        {/* Modal */}
+        {isModalOpen && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
+            <div className="bg-white rounded-2xl max-w-lg w-full p-6 relative">
+              <button 
+                onClick={toggleModal} 
+                className="absolute top-3 right-3 text-gray-500 hover:text-gray-800 font-bold text-lg"
+              >
+                &times;
+              </button>
+              <p className="text-gray-600 text-base">
+                {testimonial}
+              </p>
+            </div>
+          </div>
+        )}
 
         <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
           {/* Social Platforms Grid */}
@@ -132,12 +162,9 @@ const SocialMediaLinks = () => {
                     className="group bg-white border border-gray-200 rounded-xl p-4 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
                   >
                     <div className="flex items-center gap-4">
-                      {/* Platform Icon */}
                       <div className={`w-12 h-12 ${platform.bgColor} rounded-xl flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300`}>
                         {platform.icon}
                       </div>
-
-                      {/* Platform Info */}
                       <div className="flex-1">
                         <div className="flex items-center justify-between mb-1">
                           <h4 className="font-bold text-gray-900 text-lg">{platform.name}</h4>
@@ -148,8 +175,6 @@ const SocialMediaLinks = () => {
                         <p className="text-gray-600 text-sm mb-2">{platform.handle}</p>
                         <p className="text-gray-500 text-xs">{platform.description}</p>
                       </div>
-
-                      {/* Hover Arrow */}
                       <div className="opacity-0 group-hover:opacity-100 transform group-hover:translate-x-1 transition-all duration-300">
                         <div className="w-8 h-8 bg-amber-500 rounded-full flex items-center justify-center">
                           <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -164,7 +189,7 @@ const SocialMediaLinks = () => {
             </div>
 
             {/* Social Stats */}
-            <div className="bg-gradient-to-r from-amber-500 to-yellow-600 rounded-2xl p-6 text-white">
+            {/* <div className="bg-gradient-to-r from-amber-500 to-yellow-600 rounded-2xl p-6 text-white">
               <h3 className="text-xl font-bold mb-6 text-center">Our Social Impact</h3>
               <div className="grid grid-cols-2 gap-4">
                 {socialStats.map((stat, index) => (
@@ -177,11 +202,11 @@ const SocialMediaLinks = () => {
                   </div>
                 ))}
               </div>
-            </div>
+            </div> */}
           </div>
 
           {/* Recent Content & Engagement */}
-          <div className="space-y-8">
+         <div className="space-y-8">
             {/* Recent Highlights */}
             <div className="bg-white rounded-2xl shadow-lg border border-gray-100 p-6">
               <div className="flex items-center gap-3 mb-6">
@@ -201,8 +226,8 @@ const SocialMediaLinks = () => {
                           'bg-red-500'
                         }`}>
                           {content.platform === 'Instagram' ? <Instagram className="w-4 h-4" /> :
-                           content.platform === 'Facebook' ? <Facebook className="w-4 h-4" /> :
-                           <Youtube className="w-4 h-4" />}
+                          content.platform === 'Facebook' ? <Facebook className="w-4 h-4" /> :
+                          <Youtube className="w-4 h-4" />}
                         </div>
                       </div>
 
@@ -273,48 +298,6 @@ const SocialMediaLinks = () => {
                   </div>
                 </div>
               </div>
-            </div>
-
-            {/* Newsletter Signup */}
-            <div className="bg-gradient-to-r from-amber-500 to-yellow-600 rounded-2xl p-6 text-white">
-              <h3 className="text-xl font-bold mb-3">Stay Updated</h3>
-              <p className="text-amber-100 mb-4">
-                Subscribe to our newsletter for monthly insights and exclusive content.
-              </p>
-              <div className="flex gap-2">
-                <input
-                  type="email"
-                  placeholder="Enter your email"
-                  className="flex-1 px-4 py-3 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-amber-300"
-                />
-                <button className="bg-white text-amber-600 px-6 py-3 rounded-lg font-semibold hover:bg-amber-50 transition-colors">
-                  Subscribe
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Bottom CTA */}
-        <div className="text-center mt-12">
-          <div className="bg-white rounded-2xl shadow-lg border border-amber-100 p-8">
-            <h3 className="text-2xl font-bold text-gray-800 mb-4">Join Our Growing Community</h3>
-            <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-              Connect with us on social media to be part of the Nitty Gritty family and stay 
-              informed about our latest projects and industry insights.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              {socialPlatforms.slice(0, 3).map((platform) => (
-                <a
-                  key={platform.name}
-                  href={platform.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`px-6 py-3 rounded-lg font-semibold text-white transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg ${platform.bgColor}`}
-                >
-                  Follow on {platform.name}
-                </a>
-              ))}
             </div>
           </div>
         </div>

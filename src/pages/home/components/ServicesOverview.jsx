@@ -231,7 +231,7 @@ const ServicesOverview = () => {
                 {/* Bottom Badge */}
                 <div className="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-sm rounded-lg p-3 shadow-md">
                   <p className="text-xs text-gray-600 mb-0.5">Available in</p>
-                  <p className="font-bold text-gray-900 text-sm">Johannesburg • Durban • Cape Town</p>
+                  <p className="font-bold text-gray-900 text-sm">Johannesburg</p>
                 </div>
               </div>
 

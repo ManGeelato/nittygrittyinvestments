@@ -264,18 +264,21 @@ const ProjectGrid = () => {
         </div>
 
         {/* Load More Button */}
-        <div className="text-center mt-10">
+        {/* <div className="text-center mt-10">
           <button className="group inline-flex items-center gap-1 px-6 py-3 bg-gradient-to-r from-[#A67C00] to-[#A67C00] text-white font-semibold rounded-lg shadow-md hover:shadow-lg hover:from-amber-600 hover:to-amber-700 transition-all duration-300 transform hover:-translate-y-0.5 text-sm">
-            <span>Load More Projects</span>
-            <ArrowRight size={18} className="group-hover:translate-x-0.5 transition-transform" />
+            <span>Contact Us Today</span>
+             <a
+                href="/contact"
+                className="group inline-flex items-center justify-center gap-1.5 px-6 py-3 bg-gradient-to-r from-[#A67C00] to-[#A67C00] text-white font-semibold rounded-lg shadow-lg hover:shadow-xl hover:from-amber-600 hover:to-amber-700 transition-all duration-300 transform hover:-translate-y-0.5 text-sm"
+              >       
+              <ArrowRight className="group-hover:translate-x-1 transition-transform" size={16} />
+              </a>
           </button>
-          <p className="text-gray-600 text-xs mt-3">
-            Showing <span className="font-bold text-amber-600">9</span> of <span className="font-bold text-amber-600">2,500</span> projects
-          </p>
-        </div>
+          
+        </div>  */}
 
         {/* Quick Stats Bar */}
-        <div className="mt-10 grid grid-cols-2 lg:grid-cols-4 gap-3">
+        {/* <div className="mt-10 grid grid-cols-2 lg:grid-cols-4 gap-3">
           <div className="bg-white rounded-xl p-4 shadow-md text-center">
             <div className="text-2xl font-bold bg-gradient-to-r from-slate-600 to-slate-800 bg-clip-text text-transparent mb-1">
               500+
@@ -300,7 +303,7 @@ const ProjectGrid = () => {
             </div>
             <div className="text-xs text-gray-600 font-medium">Satisfaction</div>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

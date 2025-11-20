@@ -9,9 +9,9 @@ function Projects() {
   return (
     <div>
        <ProjectsHero/>
-       <ProjectFilterTabs/>
+       {/* <ProjectFilterTabs/> */}
        <ProjectGrid/>
-       <ProjectCards/>
+       {/* <ProjectCards/> */}
        {/* <ProjectModal/> */}
     </div>
   )

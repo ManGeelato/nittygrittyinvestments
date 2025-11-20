@@ -4,12 +4,12 @@ import { CheckCircle } from 'lucide-react';
 
 const Cleaning = () => {
   const cleaningImages = [
-    '/cleaning1.jpg',
-    '/cleaning2.jpg',
-    '/cleaning3.jpg',
-    '/cleaning4.jpg',
-    '/cleaning5.jpg',
-    '/cleaning6.jpg',
+    '/11.png',
+    '/12.png',
+    '/6.png',
+    '/4.png',
+    '/10.png',
+    '/10.png',
   ];
 
 return (

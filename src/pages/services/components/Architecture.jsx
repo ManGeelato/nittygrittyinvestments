@@ -4,23 +4,17 @@ import { CheckCircle } from 'lucide-react';
 
 const Architecture = () => {
   const architectureImages = [
-    '/IMG-20251114-WA0058.jpg',
-    '/IMG-20251114-WA0059.jpg',
-    'IMG-20251114-WA0063.jpg',
-    'IMG-20251114-WA0064.jpg',
-    'IMG-20251114-WA0069.jpg',
-    'IMG-20251114-WA0069.jpg',
-    'IMG-20251114-WA0019.jpg',
-    'IMG-20251114-WA0020.jpg',
-    'IMG-20251114-WA0025.jpg',
-    'IMG-20251114-WA0026.jpg',
-    'IMG-20251114-WA0034.jpg',
-    'IMG-20251114-WA0035.jpg',
-    'IMG-20251114-WA0053.jpg',
-    'IMG-20251114-WA0054.jpg',
-    'IMG-20251114-WA0055.jpg',
-    'IMG-20251114-WA0056.jpg',
-    'IMG-20251114-WA0069.jpg',
+    '/7.png',
+    '/2.png',
+    '/3.png',
+    '/5.png',
+    '/5.png',
+    '/5.png',
+    '/1.png',
+    '/8.png',
+    '/9.png',
+    '/8.png',
+    '/14.png',
   ];
 
 return (

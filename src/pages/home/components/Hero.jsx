@@ -171,7 +171,7 @@ const Hero = () => {
             </div>
 
             {/* Features Grid */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-6">
+            {/* <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-6">
               {features.map((feature, idx) => (
                 <div key={idx} className="flex flex-col items-center text-center p-3 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
                   <div className="w-10 h-10 bg-gradient-to-br from-amber-100 to-amber-200 rounded-full flex items-center justify-center mb-1.5">
@@ -180,7 +180,7 @@ const Hero = () => {
                   <span className="text-xs font-medium text-gray-700">{feature.text}</span>
                 </div>
               ))}
-            </div>
+            </div> */}
           </div>
         </div>
 
