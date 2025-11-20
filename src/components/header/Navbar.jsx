@@ -65,7 +65,7 @@ const Navbar = () => {
           </div>
           <div className="flex items-center gap-1.5">
             <MapPin size={12} />
-            <span>Johannesburg | Durban | Cape Town</span>
+            <span>Johannesburg</span>
           </div>
         </div>
       </div>
