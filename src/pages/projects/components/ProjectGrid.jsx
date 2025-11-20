@@ -199,10 +199,10 @@ const ProjectGrid = () => {
                   <div className={`absolute inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center transition-opacity duration-300 ${
                     isHovered ? 'opacity-100' : 'opacity-0'
                   }`}>
-                    <div className="text-center text-white">
+                    {/* <div className="text-center text-white">
                       <Eye size={24} className="mx-auto mb-1" />
                       <p className="text-xs font-semibold">View Details</p>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
 
@@ -248,10 +248,10 @@ const ProjectGrid = () => {
                   </div>
 
                   {/* View Button */}
-                  <button className={`w-full flex items-center justify-center gap-1 px-3 py-2 bg-gradient-to-r ${project.gradient} text-white font-semibold rounded-lg transition-all duration-300 group-hover:shadow-md text-sm`}>
+                  {/* <button className={`w-full flex items-center justify-center gap-1 px-3 py-2 bg-gradient-to-r ${project.gradient} text-white font-semibold rounded-lg transition-all duration-300 group-hover:shadow-md text-sm`}>
                     <span>View Project</span>
                     <ArrowRight size={16} className="group-hover:translate-x-0.5 transition-transform" />
-                  </button>
+                  </button> */}
                 </div>
 
                 {/* Bottom Accent Line */}
