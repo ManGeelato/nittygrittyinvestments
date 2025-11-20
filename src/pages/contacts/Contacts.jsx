@@ -10,11 +10,11 @@ function Contacts() {
   return (
     <div>
        <ContactHero/>
-       <MultiLocationCards/>
        {/* <ContactForm/> */}
        {/* <InteractiveMap/> */}
-       <OperatingHoursDisplay/>
        <SocialMediaLinks/>
+       <OperatingHoursDisplay/>
+       <MultiLocationCards/>
     </div>
   )
 }
